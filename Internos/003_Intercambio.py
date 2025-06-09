@@ -1,14 +1,12 @@
 def bubble_sort(arr):
     """
     Ordenamiento por burbuja.
-    Recorre la lista y realiza intercambios de elementos adyacentes si están en el orden incorrecto.
+    Compara e intercambia elementos adyacentes si están en el orden incorrecto.
     """
     n = len(arr)
-    for i in range(n):
-        # Últimos i elementos ya están en su lugar
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                # Intercambiar si el elemento encontrado es mayor que el siguiente
+    for i in range(n):  # Recorre la lista varias veces.
+        for j in range(0, n - i - 1):  # Compara elementos adyacentes.
+            if arr[j] > arr[j + 1]:  # Si el actual es mayor que el siguiente, los intercambia.
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
 # Ejemplo de uso
